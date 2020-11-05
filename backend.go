@@ -18,7 +18,9 @@ func readshowme() string {
 	dat, err := ioutil.ReadFile("/home/ec2-user/environment/showme.txt")
 	check(err)
 	// 	fmt.Print(string(dat))
-	return string(dat)
+	dat2, err := ioutil.ReadFile("/home/ec2-user/environment/pong.txt")
+	check(err)
+	return string(dat) + string(dat2)
 }
 
 func main() {
